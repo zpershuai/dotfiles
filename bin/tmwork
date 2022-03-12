@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cmd=$(which tmux)      # tmux path
+cmdload=$(which tmuxp)      # tmux path
+
+if [ -z $cmd ]; then
+    echo "You need to install tmux."
+    exit 1
+fi
+
+$cmd has -t $session 2> /dev/null
+
+if [ $? != 0 ]; then
+    $cmd new -d -n base-act -s $session "debug"
+    $cmd new -d -n base-act -s $session "docker"
+    $cmd new -d -n base-act -s $session "default"                                                        
+    $cmd new -d -n base-act -s $session "work"
+fi
+
+$cmd att -t "default"
+
+exit 0
