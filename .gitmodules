@@ -4,3 +4,6 @@
 [submodule "zsh"]
 	path = zsh
 	url = git@github.com:zpershuai/zsh.git
+[submodule "emacs"]
+	path = emacs
+	url = git@github.com:zpershuai/emacs.git
