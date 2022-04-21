@@ -11,12 +11,9 @@ fi
 $cmd has -t $session 2> /dev/null
 
 if [ $? != 0 ]; then
-    $cmd new -d -n base-act -s $session "debug"
-    $cmd new -d -n base-act -s $session "docker"
-    $cmd new -d -n base-act -s $session "default"                                                        
-    $cmd new -d -n base-act -s $session "work"
+    $cmd new -d -n base-act -s $session "base" 
 fi
 
-$cmd att -t "default"
+$cmd att -t "base"
 
 exit 0
