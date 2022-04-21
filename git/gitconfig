@@ -1,3 +1,10 @@
 [user]
 	name = zpershuai
 	email = zpershuai@gmail.com
+[color]
+	ui = auto
+[safe]
+	directory = /home/zpershuai/Code/os/armbian/armbian_s8xx
+[oh-my-zsh]
+	hide-status = 1
+	hide-info = 1
